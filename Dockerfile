@@ -3,15 +3,15 @@ MAINTAINER Shaoqing Yu <syu702@aucklanduni.ac.nz>
 
 RUN apt-get update
 
-ENV OWNCLOUD_ROOT /var/www/html/owncloud
+#ENV OWNCLOUD_ROOT /var/www/html
+WORKDIR /var/www/html
 
 # add my own configuration file
-ADD config.php $OWNCLOUD_ROOT/config/config.php
-
-Add 
+ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/config.php config/config.php
 
 # disable activity app by defualt
-RUN sed -i "s/<default_enable\/>/ /g" $OWNCLOUD_ROOT/apps/activity/appinfo/info.xml
+ONBUILD RUN sed -i "s/<default_enable\/>/ /g" apps/activity/appinfo/info.xml
 
 # disable gallery app by defualt
-RUN sed -i "s/<default_enable\/>/ /g" $OWNCLOUD_ROOT/apps/gallery/appinfo/info.xml
+ONBUILD RUN sed -i "s/<default_enable\/>/ /g" apps/gallery/appinfo/info.xml
+
