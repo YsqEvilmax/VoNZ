@@ -7,7 +7,10 @@ RUN apt-get update
 WORKDIR /var/www/html
 
 # add my own configuration file
-ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/config.php config/config.php
+COPY config.php config/config.php
+
+# add default user data
+COPY data/ data/
 
 # add my own configuration file
 ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/setting.sh /setting.sh
