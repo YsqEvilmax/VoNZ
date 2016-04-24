@@ -11,6 +11,7 @@ ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/config.php config/c
 
 # add my own configuration file
 ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/setting.sh /setting.sh
+RUN chmod +x /setting.sh
 
 ENTRYPOINT ["/setting.sh"]
 CMD ["apache2-foreground"]

@@ -8,4 +8,4 @@ sed -i "s/<default_enable\/>/ /g" apps/activity/appinfo/info.xml
 # disable gallery app by defualt
 sed -i "s/<default_enable\/>/ /g" apps/gallery/appinfo/info.xml
 
-exec entrypoint.sh
+exec /entrypoint.sh
