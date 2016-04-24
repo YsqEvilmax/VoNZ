@@ -10,7 +10,7 @@ WORKDIR /var/www/html
 ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/config.php config/config.php
 
 # add my own configuration file
-# ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/setting.sh /setting.sh
+ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/setting.sh /setting.sh
 
 ENTRYPOINT ["/setting.sh"]
 CMD ["apache2-foreground"]
