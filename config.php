@@ -28,5 +28,6 @@ $CONFIG = array (
   'mail_smtpport' => '465',
   'mail_smtpname' => 'voiceofnewzealand@gmail.com',
   'mail_smtppassword' => 'ai251917',
+  'skeletondirectory' => '',
 );
 
