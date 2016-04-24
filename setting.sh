@@ -10,4 +10,5 @@ sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/activity/appinfo/info.xml
 # disable gallery app by defualt
 sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/gallery/appinfo/info.xml
 
-bash /entrypoint.sh
+exec "/entrypoint.sh"
+exec "$@"
