@@ -15,6 +15,9 @@ COPY data/ data/
 # add registration feature
 RUN git clone https://github.com/pellaeon/registration.git apps/registration
 
+# add recorder feature
+RUN git clone https://github.com/YsqEvilmax/recorder.git apps/recorder
+
 # add my own configuration file
 ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/setting.sh /setting.sh
 RUN chmod +x /setting.sh
