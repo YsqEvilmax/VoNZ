@@ -17,4 +17,10 @@ sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/activity/appinfo/info.xml
 # disable gallery app by defualt
 sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/gallery/appinfo/info.xml
 
+# add registration feature
+git clone https://github.com/pellaeon/registration.git apps/registration
+
+# add recorder feature
+git clone https://github.com/YsqEvilmax/recorder.git apps/recorder
+
 exec "$@"
