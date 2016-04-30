@@ -23,4 +23,7 @@ git clone https://github.com/pellaeon/registration.git apps/registration
 # add recorder feature
 git clone https://github.com/YsqEvilmax/recorder.git apps/recorder
 
+#add background feature
+git clone https://github.com/YsqEvilmax/background.git apps/background
+
 exec "$@"
