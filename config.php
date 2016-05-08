@@ -1,8 +1,8 @@
 <?php
 $CONFIG = array (
-  'instanceid' => 'ochfem4hh3y1',
-  'passwordsalt' => '7DzYVBhoe3iz6JLpRsD2TIOA4rDeG3',
-  'secret' => '8SyB5zSREUFXMyyV0qTcXhDhHYF+EDMvGIEcxooSoZTZJ2G4',
+  'instanceid' => 'ochdtxvq9q0h',
+  'passwordsalt' => 'ddD5bthNwBZa077CQBQUsGauSrNNgy',
+  'secret' => 'n8jzd0X/a6lqIh2z9Yx2tQCUrvmeYjGEZ3KBOIRlTQO1RWCu',
   'trusted_domains' => 
   array (
     0 => 'ec2-52-63-247-158.ap-southeast-2.compute.amazonaws.com',
@@ -14,8 +14,8 @@ $CONFIG = array (
   'dbname' => 'vonz',
   'dbhost' => ' mysql.czrhhzselpqu.ap-southeast-2.rds.amazonaws.com',
   'dbtableprefix' => 'oc_',
-  'dbuser' => 'oc_admin',
-  'dbpassword' => 'pwMS/oe2u5bTbztXX9lfqaS4iBhana',
+  'dbuser' => 'oc_admin3',
+  'dbpassword' => 'c1zu+yHvNGGg/nVaDCcyZNtafTB8gM',
   'logtimezone' => 'UTC',
   'installed' => true,
   'mail_smtpmode' => 'smtp',
