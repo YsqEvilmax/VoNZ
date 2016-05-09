@@ -5,10 +5,10 @@ $CONFIG = array (
   'secret' => 'UnlRzjCV9T5RR+CleC24AH0dc5yRR0tj1WDpNdmZVbxIb+6t',
   'trusted_domains' => 
   array (
-    0 => 'ec2-52-63-247-158.ap-southeast-2.compute.amazonaws.com',
+    0 => 'ec2-52-63-134-55.ap-southeast-2.compute.amazonaws.com',
   ),
   'datadirectory' => '/var/www/html/data',
-  'overwrite.cli.url' => 'http://ec2-52-63-247-158.ap-southeast-2.compute.amazonaws.com',
+  'overwrite.cli.url' => 'http://ec2-52-63-134-55.ap-southeast-2.compute.amazonaws.com',
   'dbtype' => 'mysql',
   'version' => '9.0.1.3',
   'dbname' => 'vonz',
