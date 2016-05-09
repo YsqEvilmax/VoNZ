@@ -1,8 +1,8 @@
 <?php
 $CONFIG = array (
-  'instanceid' => 'ochdtxvq9q0h',
-  'passwordsalt' => 'ddD5bthNwBZa077CQBQUsGauSrNNgy',
-  'secret' => 'n8jzd0X/a6lqIh2z9Yx2tQCUrvmeYjGEZ3KBOIRlTQO1RWCu',
+  'instanceid' => 'ochsk6zzgba2',
+  'passwordsalt' => 'h4UWwS1vgUfzjqi0c/agdjuQ8rnEzc',
+  'secret' => 'UnlRzjCV9T5RR+CleC24AH0dc5yRR0tj1WDpNdmZVbxIb+6t',
   'trusted_domains' => 
   array (
     0 => 'ec2-52-63-247-158.ap-southeast-2.compute.amazonaws.com',
@@ -10,12 +10,12 @@ $CONFIG = array (
   'datadirectory' => '/var/www/html/data',
   'overwrite.cli.url' => 'http://ec2-52-63-247-158.ap-southeast-2.compute.amazonaws.com',
   'dbtype' => 'mysql',
-  'version' => '9.0.1.3',
+  'version' => '9.1.0.0',
   'dbname' => 'vonz',
-  'dbhost' => ' mysql.czrhhzselpqu.ap-southeast-2.rds.amazonaws.com',
+  'dbhost' => 'mysql.czrhhzselpqu.ap-southeast-2.rds.amazonaws.com',
   'dbtableprefix' => 'oc_',
-  'dbuser' => 'oc_admin3',
-  'dbpassword' => 'c1zu+yHvNGGg/nVaDCcyZNtafTB8gM',
+  'dbuser' => 'oc_admin4',
+  'dbpassword' => 'iHWRgjJhrMDUEu6i0Eg7r4jwZsyPxO',
   'logtimezone' => 'UTC',
   'installed' => true,
   'mail_smtpmode' => 'smtp',
