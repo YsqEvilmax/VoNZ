@@ -13,8 +13,8 @@ fi
  && echo "Cert and Key Found" \
  || echo "Cert and Key not found! Re-creating now!" \
     openssl req -new -x509 -newkey rsa:2048 -days 365 \
-    -keyout owncloud-key.pem \
-    -out owncloud-cert.pem \
+    -keyout "/etc/ssl/private/owncloud-key.pem" \
+    -out "/etc/ssl/certs/owncloud-cert.pem" \
     -subj '/CN=owncloud'
 
 if [[ "$1" = apache2* ]]; then
