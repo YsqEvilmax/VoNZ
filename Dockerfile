@@ -1,7 +1,7 @@
 FROM owncloud:latest
 MAINTAINER Shaoqing Yu <syu702@aucklanduni.ac.nz>
 
-RUN apt-get update && apt-get install -y git openssl
+RUN apt-get update && apt-get install -y git
 
 #ENV OWNCLOUD_ROOT /var/www/html
 WORKDIR /var/www/html
