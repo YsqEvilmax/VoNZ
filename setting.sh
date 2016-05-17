@@ -51,8 +51,8 @@ if [[ "$1" = apache2* ]]; then
 			OWNCLOUD_TLS_KEY="/etc/ssl/private/$OWNCLOUD_TLS_KEY"
 		fi
 
-		sudo a2enmod ssl
-		sudo a2ensite owncloud-ssl
+		a2enmod ssl
+		a2ensite owncloud-ssl
 
 		export OWNCLOUD_TLS_CERT="$(readlink -f "$OWNCLOUD_TLS_CERT")"
 		export OWNCLOUD_TLS_KEY="$(readlink -f "$OWNCLOUD_TLS_KEY")"
