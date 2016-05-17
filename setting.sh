@@ -20,17 +20,17 @@ if [[ "$1" = apache2* ]]; then
 			exit 1
 		fi
 
-		if ! [ -f "$OWNCLOUD_TLS_CERT" -o -f "/etc/ssl/certs/$OWNCLOUD_TLS_CERT" ]; then
+		if ! [ -e "$OWNCLOUD_TLS_CERT" -o -e "/etc/ssl/certs/$OWNCLOUD_TLS_CERT" ]; then
 			echo >&2 "ERROR: TLS certificate '$OWNCLOUD_TLS_CERT' not found"
 			exit 1
-		elif ! [ -f "$OWNCLOUD_TLS_CERT" ]; then
+		elif ! [ -e "$OWNCLOUD_TLS_CERT" ]; then
 			OWNCLOUD_TLS_CERT="/etc/ssl/certs/$OWNCLOUD_TLS_CERT"
 		fi
 
-		if ! [ -f "$OWNCLOUD_TLS_KEY" -o -f "/etc/ssl/private/$OWNCLOUD_TLS_KEY" ]; then
+		if ! [ -e "$OWNCLOUD_TLS_KEY" -o -e "/etc/ssl/private/$OWNCLOUD_TLS_KEY" ]; then
 			echo >&2 "ERROR: TLS key '$OWNCLOUD_TLS_KEY' not found"
 			exit 1
-		elif ! [ -f "$OWNCLOUD_TLS_KEY" ]; then
+		elif ! [ -e "$OWNCLOUD_TLS_KEY" ]; then
 			OWNCLOUD_TLS_KEY="/etc/ssl/private/$OWNCLOUD_TLS_KEY"
 		fi
 
