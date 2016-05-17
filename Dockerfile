@@ -13,8 +13,13 @@ COPY config.php config/config.php
 COPY data/ data/
 
 # add my own configuration file
-ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/setting.sh /setting.sh
+# ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/setting.sh /setting.sh
+COPY setting.sh /setting.sh
 RUN chmod +x /setting.sh
+
+# enable https
+COPY owncloud-ssl.conf /etc/apache2/sites-available/
+EXPOSE 443
 
 ENTRYPOINT ["/setting.sh"]
 CMD ["apache2-foreground"]
