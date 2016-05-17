@@ -17,7 +17,7 @@ COPY data/ data/
 COPY setting.sh /setting.sh
 RUN chmod +x /setting.sh
 
-# enable https
+# enable https, refer to https://github.com/docker-library/owncloud/issues/23
 COPY owncloud-ssl.conf /etc/apache2/sites-available/
 EXPOSE 443
 
