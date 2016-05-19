@@ -6,9 +6,10 @@ $CONFIG = array (
   'trusted_domains' => 
   array (
     0 => 'ec2-52-63-134-55.ap-southeast-2.compute.amazonaws.com',
+    1 => 'ec2-52-64-29-123.ap-southeast-2.compute.amazonaws.com',
   ),
   'datadirectory' => '/var/www/html/data',
-  'overwrite.cli.url' => 'http://ec2-52-63-134-55.ap-southeast-2.compute.amazonaws.com',
+  'overwrite.cli.url' => 'http://ec2-52-64-29-123.ap-southeast-2.compute.amazonaws.com',
   'dbtype' => 'mysql',
   'version' => '9.0.2',
   'dbname' => 'vonz',
