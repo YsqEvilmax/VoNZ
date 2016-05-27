@@ -36,6 +36,8 @@ ENV OWNCLOUD_VERSION 9.1.0.5
 
 ENV OWNCLOUD_TAG master
 
+VOLUME /var/www/html
+
 # Fetch ownCloud dist files 
 ADD https://codeload.github.com/owncloud/core/tar.gz/${OWNCLOUD_TAG} \
     /tmp/owncloud.tar.gz
