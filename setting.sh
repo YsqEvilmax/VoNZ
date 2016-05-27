@@ -4,12 +4,12 @@
 
 set -e
 
-if [ ! -e '/var/www/html/version.php' ]; then
+if [ ! -e '/var/www/owncloud/version.php' ]; then
 	tar cf - --one-file-system -C /usr/src/owncloud . | tar xf -
-	chown -R www-data /var/www/html
+	chown -R www-data /var/www/owncloud
 fi
 
-VONZ_ROOT="/var/www/html"
+VONZ_ROOT="/var/www/owncloud"
 
 # disable activity app by defualt
 sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/activity/appinfo/info.xml
@@ -18,13 +18,13 @@ sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/activity/appinfo/info.xml
 sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/gallery/appinfo/info.xml
 
 # add registration feature
-git clone https://github.com/pellaeon/registration.git apps/registration
+# git clone https://github.com/pellaeon/registration.git apps/registration
 
 # add recorder feature
-git clone https://github.com/YsqEvilmax/recorder.git apps/recorder
+# git clone https://github.com/YsqEvilmax/recorder.git apps/recorder
 
 #add background feature
-git clone https://github.com/YsqEvilmax/background.git apps/background
+# git clone https://github.com/YsqEvilmax/background.git apps/background
 
 if [[ "$1" = apache2* ]]; then
 	: ${OWNCLOUD_TLS_CERT:=$OWNCLOUD_SSL_CERT}
