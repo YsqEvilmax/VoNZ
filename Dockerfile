@@ -52,7 +52,7 @@ RUN tar -C /var/www/ -xvf /tmp/owncloud.tar.gz && \
 
 WORKDIR /var/www/owncloud
 
-// Assign sudo to www-data
+# Assign sudo to www-data
 RUN usermod -u 1000 www-data
 
 # add my own configuration file
