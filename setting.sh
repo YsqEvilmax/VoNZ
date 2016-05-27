@@ -6,12 +6,12 @@ set -e
 
 VONZ_ROOT="/var/www/owncloud"
 
-if [ ! -e '$VONZ_ROOT/version.php' ]; then
+if [ ! -e "$VONZ_ROOT/version.php" ]; then
 	tar cf - --one-file-system -C /usr/src/owncloud . | tar xf -
 	chown -R www-data $VONZ_ROOT
 fi
 
-if [ -f '$VONZ_ROOT/config/config.php' ]; then
+if [ -f "$VONZ_ROOT/config/config.php" ]; then
         chown -R www-data $VONZ_ROOT/config/config.php
 fi
 
