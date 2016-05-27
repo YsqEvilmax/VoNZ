@@ -34,26 +34,27 @@ RUN pecl install APCu-4.0.10 redis memcached \
 
 RUN a2enmod rewrite
 
-ENV OWNCLOUD_VERSION 9.0.2
+ENV OWNCLOUD_VERSION 9.1.0.5
+
+ENV OWNCLOUD_TAG master
 
 # Fetch ownCloud dist files 
-ADD https://codeload.github.com/owncloud/core/tar.gz/v${OWNCLOUD_VERSION}.tar.gz \
+ADD https://codeload.github.com/owncloud/core/tar.gz/${OWNCLOUD_TAG} \
     /tmp/owncloud.tar.gz
-ADD https://codeload.github.com/owncloud/3rdparty/tar.gz/v${OWNCLOUD_VERSION}.tar.gz \
+ADD https://codeload.github.com/owncloud/3rdparty/tar.gz/${OWNCLOUD_TAG} \
     /tmp/3rdparty.tar.gz
 
 # Install ownCloud 
 RUN tar -C /var/www/ -xvf /tmp/owncloud.tar.gz && \
     tar -C /var/www/ -xvf /tmp/3rdparty.tar.gz && \
-    mv /var/www/core-${OWNCLOUD_VERSION} /var/www/owncloud && \
+    mv /var/www/core-${OWNCLOUD_TAG} /var/www/owncloud && \
     rmdir /var/www/owncloud/3rdparty && \
-    mv /var/www/3rdparty-${OWNCLOUD_VERSION} /var/www/owncloud/3rdparty && \
+    mv /var/www/3rdparty-${OWNCLOUD_TAG} /var/www/owncloud/3rdparty && \
     rm /tmp/owncloud.tar.gz /tmp/3rdparty.tar.gz &&
 
 
 
-VOLUME ["/var/www/owncloud/config", "/var/www/owncloud/data", "/var/www/owncloud/apps", \
-    "/etc/ssl/certs/owncloud.crt", "/etc/ssl/private/owncloud.key"]
+VOLUME ["/var/www/owncloud/config", "/var/www/owncloud/data", "/var/www/owncloud/apps"]
 
 WORKDIR /var/www/owncloud
 
