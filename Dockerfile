@@ -52,6 +52,9 @@ RUN tar -C /var/www/ -xvf /tmp/owncloud.tar.gz && \
 
 WORKDIR /var/www/owncloud
 
+// Assign sudo to www-data
+RUN usermod -u 1000 www-data
+
 # add my own configuration file
 # ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/setting.sh /setting.sh
 COPY setting.sh /setting.sh
