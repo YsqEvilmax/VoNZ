@@ -50,7 +50,7 @@ RUN tar -C /var/www/ -xvf /tmp/owncloud.tar.gz && \
     mv /var/www/core-${OWNCLOUD_TAG} /var/www/owncloud && \
     rmdir /var/www/owncloud/3rdparty && \
     mv /var/www/3rdparty-${OWNCLOUD_TAG} /var/www/owncloud/3rdparty && \
-    rm /tmp/owncloud.tar.gz /tmp/3rdparty.tar.gz &&
+    rm /tmp/owncloud.tar.gz /tmp/3rdparty.tar.gz
 
 
 
