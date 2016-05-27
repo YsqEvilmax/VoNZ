@@ -46,11 +46,11 @@ ADD https://codeload.github.com/owncloud/3rdparty/tar.gz/${OWNCLOUD_TAG} \
 RUN tar -C /var/www/ -xvf /tmp/owncloud.tar.gz && \
     tar -C /var/www/ -xvf /tmp/3rdparty.tar.gz && \
     mv /var/www/core-${OWNCLOUD_TAG} /var/www/html && \
-    rmdir /var/www/owncloud/3rdparty && \
+    rmdir /var/www/html/3rdparty && \
     mv /var/www/3rdparty-${OWNCLOUD_TAG} /var/www/html/3rdparty && \
     rm /tmp/owncloud.tar.gz /tmp/3rdparty.tar.gz
 
-WORKDIR /var/www/owncloud
+WORKDIR /var/www/html
 
 # add my own configuration file
 # ADD https://raw.githubusercontent.com/YsqEvilmax/vonz/master/setting.sh /setting.sh
