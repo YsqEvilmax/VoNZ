@@ -6,10 +6,10 @@ set -e
 
 if [ ! -e '/var/www/owncloud/version.php' ]; then
 	tar cf - --one-file-system -C /usr/src/owncloud . | tar xf -
-	chown -R www-data /var/www/html
+	chown -R www-data /var/www/owncloud
 fi
 
-VONZ_ROOT="/var/www/html"
+VONZ_ROOT="/var/www/owncloud"
 
 # disable activity app by defualt
 # sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/activity/appinfo/info.xml
