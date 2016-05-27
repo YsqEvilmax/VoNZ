@@ -50,11 +50,6 @@ if [[ "$1" = apache2* ]]; then
 		elif ! [ -e "$OWNCLOUD_TLS_KEY" ]; then
 			OWNCLOUD_TLS_KEY="/etc/apache2/ssl/$OWNCLOUD_TLS_KEY"
 		fi
-		
-		a2enmod ssl
-		a2enmod	rewrite
-		a2enmod headers
-		a2ensite owncloud-ssl
 
 		export OWNCLOUD_TLS_CERT="$(readlink -f "$OWNCLOUD_TLS_CERT")"
 		export OWNCLOUD_TLS_KEY="$(readlink -f "$OWNCLOUD_TLS_KEY")"

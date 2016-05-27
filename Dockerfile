@@ -32,8 +32,6 @@ RUN { \
 RUN pecl install APCu-4.0.10 redis memcached \
 	&& docker-php-ext-enable apcu redis memcached
 
-RUN a2enmod rewrite
-
 ENV OWNCLOUD_VERSION 9.1.0.5
 
 ENV OWNCLOUD_TAG master
@@ -52,10 +50,6 @@ RUN tar -C /var/www/ -xvf /tmp/owncloud.tar.gz && \
     mv /var/www/3rdparty-${OWNCLOUD_TAG} /var/www/owncloud/3rdparty && \
     rm /tmp/owncloud.tar.gz /tmp/3rdparty.tar.gz
 
-
-
-VOLUME ["/var/www/owncloud/config", "/var/www/owncloud/data", "/var/www/owncloud/apps"]
-
 WORKDIR /var/www/owncloud
 
 # add my own configuration file
@@ -65,6 +59,11 @@ RUN chmod +x /setting.sh
 
 # enable https, refer to https://github.com/docker-library/owncloud/issues/23
 COPY owncloud-ssl.conf /etc/apache2/sites-available/
+
+RUN a2enmod rewrite
+RUN a2enmod ssl
+RUN a2enmod headers
+RUN a2ensite owncloud-ssl
 
 EXPOSE 80 443 
 
