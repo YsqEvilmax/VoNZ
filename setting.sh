@@ -63,4 +63,6 @@ if [[ "$1" = apache2* ]]; then
 	fi
 fi
 
+chown -R www-data:www-data $VONZ_ROOT
+
 exec "$@"
