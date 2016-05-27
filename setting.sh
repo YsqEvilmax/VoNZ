@@ -11,10 +11,6 @@ if [ ! -e "$VONZ_ROOT/version.php" ]; then
 	chown -R www-data $VONZ_ROOT
 fi
 
-if [ -f "$VONZ_ROOT/config/config.php" ]; then
-        chown -R www-data $VONZ_ROOT/config/config.php
-fi
-
 # disable activity app by defualt
 # sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/activity/appinfo/info.xml
 
