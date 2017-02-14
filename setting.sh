@@ -8,7 +8,7 @@ VONZ_ROOT="/var/www/html"
 
 if [ ! -e "$VONZ_ROOT/version.php" ]; then
 	tar cf - --one-file-system -C /usr/src/owncloud . | tar xf -
-	chown -R www-data /$VONZ_ROOT
+	chown -R www-data $VONZ_ROOT
 fi
 
 # disable activity app by defualt
