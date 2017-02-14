@@ -11,10 +11,10 @@ if [ ! -e "$VONZ_ROOT/version.php" ]; then
 	chown -R www-data $VONZ_ROOT
 fi
 
-# disable activity app by defualt
+# disable activity app by default
 # sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/activity/appinfo/info.xml
 
-# disable gallery app by defualt
+# disable gallery app by default
 # sed -i "s/<default_enable\/>/ /g" $VONZ_ROOT/apps/gallery/appinfo/info.xml
 
 # add registration feature
